@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://xedpcr7cyeuv"]
+
+[sub_resource type="Environment" id="Environment_nk8fo"]
+background_energy_multiplier = 0.38
+ambient_light_source = 3
+ambient_light_color = Color(0.662745, 0, 0, 1)
+ambient_light_energy = 5.15
+reflected_light_source = 1
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_nk8fo"]
+
+[node name="hackpad-3d-env" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nk8fo")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.730949, 0.682432, 0, -0.682432, 0.730949, 0, 5.68572, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95647, -6.53021)
+mesh = SubResource("BoxMesh_nk8fo")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.78674, -4.71517)
