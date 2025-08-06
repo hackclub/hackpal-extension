@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx16ijidibw35"]
+
+[ext_resource type="Script" uid="uid://8icmibv5r3i8" path="res://addons/hackpal/assets/postcard.gd" id="1_yn5xt"]
+
+[node name="Postcard" type="PanelContainer"]
+script = ExtResource("1_yn5xt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "From:"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Content:"
